@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Skript, mis arvutab kolmnurga hüpotenuusi
+# Skript, mis leiab, kas sisestatud täisarv on paaris/paaritu
 
 
 #Andmete sisestamine ja nende lugemine
