@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+# Skript, mis küsib kasutajalt OS-i eelistusi
+
+
+osch=0
+#Skript küsib kasutajalt andmeid
+echo "1. Unix (Sun Os)"
+echo "2. Linux (Red Hat)"
+echo -n "Select your choice of OS (1 or 2)...: "
+read osch
+
+#Arvutused
+if [ $osch -eq 1 ]; then
+	echo "You picked Unix (Sun OS)."
+else	
+	if [ $osch -eq 2 ]; then
+		echo "You picked Linux (Red Hat)"
+	else
+		echo "What? You don't like Unix/Linux OS?!?!?"
+	fi
+fi
+
+#Skripti lõpp
