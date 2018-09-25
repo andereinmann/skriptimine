@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# Skript, mis arvutab kolmnurga hüpotenuusi
+
+
+#Andmete sisestamine ja nende lugemine
+echo -n "Sisesta suvaline täisarv: "
+read number
+
+#Vastuse arvutamine
+jaak=$(($number % 2)) #Arvutab arvu jäägi, arvutades nt  5/2=2, jääk 1
+if [ $jaak -eq 1 ] #Juhul, kui arvu jääks võrdub ühega,
+	then echo "Antud arv on paaritu." #    <-      siis väljastab selle lause
+	else echo "Antud arv on paaris." #Muidu, ehk muudel juhtudel väljastab selle lause..
+fi
+
+# Skripti lõpp
