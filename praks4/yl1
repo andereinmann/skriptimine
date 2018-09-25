@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Tervitusskript
+
+
+echo -n "Sisesta eesnimi ja perekonnanimi: " #Küsib skripti kasutajalt nime
+read eesnimi perenimi #Skript võtab arvesse nime
+echo "Sinu eesnimi on $eesnimi ja perekonnanimi on $perenimi" #Väljastab sisestatud andmed lauses
+
+
+# skripti lõpp
