@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Tervitusskript
+
+echo -n "Tere, " #väljastab ilma reavahetusesta sõna Tere
+echo -n `whoami | cut -c1 | tr [:lower:] [:upper:]` #lõikab esimese tähe ja muudab selle suureks
+echo -n `whoami | cut -c2-` #lisab ülejäänud kasutajanime
+echo "!" #väljastab ! ja teeb reavahetuse
+
+# skripti lõpp
