@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Skript väljastab (1..5) reas tärnid
+
+for i in {1..5}; do #loop loeb 1-5 ning selle alusel..
+	echo -n "$i. " #tehakse ülevalt-alla read 1..5ni (ainult numbrid)
+		for j in {1..5}; do #loopi laius, kus loetakse 1..5
+		echo -n "*" #kuni 1..5 tehakse tärne
+		done
+	echo "" #iga esimesena sisestatud loopi lõpus tehakse reavahetus
+done
+
+#Skripti lõpp
