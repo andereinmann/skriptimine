@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Tervitusskript
+# Skript, kuhu on võimalik sisestada oma nime ja see väljastab hilisemalt selle täislauses
 
 
 echo -n "Sisesta eesnimi ja perekonnanimi: " #Küsib skripti kasutajalt nime
