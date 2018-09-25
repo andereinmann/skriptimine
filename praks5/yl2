@@ -5,19 +5,18 @@
 
 #Andmete sisestamine, mida skript loeb
 echo -n "Sisesta kolmnurga külje A pikkus: "
-read kylg1
+read a_kylg
 echo -n "Sisesta kolmnurga külje B pikkus: "
-read kylg2
+read b_kylg
 echo -n "Sisesta kolmnurga külje C pikkus: "
-read kylg3
+read c_kylg
 
 #Vastuse arvutamine
-ymbermoot=$(echo "scale=2;$kylg1+$kylg2+$kylg3" | bc) #Ümbermõõdu arvutamine
-pool=$(echo "scale=2;$ymberm66t/2" | bc) #Ümbermõõt poolitatakse
-pindala=$(echo "scale=2;sqrt($pool*($pool-$kylg1)*($pool-$kylg2)*($pool-$kylg3))" | bc) #Pindala arvutamine
+p=$( echo "scale=2;($a+$b+$c)/2" | bc ) #Ümbermõõdu arvutamine
+pindala=`echo "scale=2;sqrt($p * ($p - $a_kylg) * ($p - $b_kylg) * ( $p - $c_kylg ))" | bc`
 
 #Vastuse väljastamine
-echo "Kolmnurga pindala on $pindala."
+echo "Kolmnurga pindala on $pindala"
 
 
 # Skripti lõpp
