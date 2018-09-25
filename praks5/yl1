@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Skript, mis arvutab kolmnurga hüpotenuusi
+
+
+#Andmete sisestamine
+echo -n "Sisesta kolmnurga ühe külje pikkus: "
+read kylg1
+echo -n "Sisesta kolmnurga teise külje pikkus: "
+read kylg2
+
+#Vastuse arvutamine
+vastus=$(echo "scale=2;sqrt($kylg1^2 + $kylg2^2)" | bc)
+
+#Vastuse väljastamine
+echo "Kolmnurga hüpotenuusi pikkus on $vastus."
+
+
+# Skripti lõpp
