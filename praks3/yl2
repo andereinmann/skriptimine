@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# Skript, mis otsib *.log formaadis faile
+
+
+find /var/* -name '*.log' 2>> /dev/null -exec wc -l {} \; | sort -rn #Leiab *.log formaadis failid ja järjestab need ridade arvu järgi
+
+
+# Skripti lõpp
