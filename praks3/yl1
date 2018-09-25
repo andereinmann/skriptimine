@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Skript, mis väljastab hetkese kellaaja ja kuupäeva
+
+
+echo Täna on `date '+%d.%m.%Y'` #Väljastab tänase kuupäeva
+echo Kell on `date '+%H:%M:%S'` #Väljastab hetkese kellaaja
+cal #Väljastab hetkese kuukalendri
+
+
+# Skripti lõpp
