@@ -12,8 +12,8 @@ echo -n "Sisesta kolmnurga külje C pikkus: "
 read c_kylg
 
 #Vastuse arvutamine
-p=$( echo "scale=2;($a+$b+$c)/2" | bc ) #Ümbermõõdu arvutamine
-pindala=`echo "scale=2;sqrt($p * ($p - $a_kylg) * ($p - $b_kylg) * ( $p - $c_kylg ))" | bc`
+p=$( echo "scale=2;($a_kylg+$b_kylg+$c_kylg)/2" | bc ) #Ümbermõõdu arvutamine
+pindala=` echo "scale=2;sqrt($p*($p-$a_kylg)*($p-$b_kylg)*($p-$c_kylg))" | bc`
 
 #Vastuse väljastamine
 echo "Kolmnurga pindala on $pindala"
