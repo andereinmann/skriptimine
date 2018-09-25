@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# Skript, mis arvutab kolmnurga pindala
+
+
+#Andmete sisestamine, mida skript loeb
+echo -n "Sisesta kolmnurga külje A pikkus: "
+read kylg1
+echo -n "Sisesta kolmnurga külje B pikkus: "
+read kylg2
+echo -n "Sisesta kolmnurga külje C pikkus: "
+read kylg3
+
+#Vastuse arvutamine
+ymbermoot=$(echo "scale=2;$kylg1+$kylg2+$kylg3" | bc) #Ümbermõõdu arvutamine
+pool=$(echo "scale=2;$ymberm66t/2" | bc) #Ümbermõõt poolitatakse
+pindala=$(echo "scale=2;sqrt($pool*($pool-$kylg1)*($pool-$kylg2)*($pool-$kylg3))" | bc) #Pindala arvutamine
+
+#Vastuse väljastamine
+echo "Kolmnurga pindala on $pindala."
+
+
+# Skripti lõpp
