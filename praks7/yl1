@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# Skript, kuhu on võimalik sisestada inimese vanuse ja see väljastab vanusegrupi
+
+
+#Skript küsib kasutajalt andmeid
+echo -n "Sisesta oma vanus: "
+read vanus
+
+#Arvutused 
+if test $vanus -gt 0 -a $vanus -lt 11
+then
+	echo "Oled laps." #Juhul, kui vanus jääb vahemikku 0-11, väljastab sellise lause.
+
+elif test $vanus -ge 11 -a $vanus -lt 18
+then
+	echo "Oled nooruk." #Juhul, kui vanus jääb vahemikku 11-18, väljastab sellise lause.
+
+elif test $vanus -ge 18 -a $vanus -lt 63
+then
+	echo "Oled täiskasvanud." #...
+
+elif test $vanus -ge 63
+then
+	echo "Oled seenior." #...
+
+else #Juhul, kui on sisestatud vigane sisend...
+	echo "Vigane sisend" #<- väljastab sellise lause
+
+fi
+#Skripti lõpp
+
