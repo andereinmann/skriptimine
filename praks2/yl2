@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Skript koos esmamulje ja õpilase andmetega
+echo "Ander-Eric Einmann" #Väljastab minu täispika nime
+echo "ISP217" #Väljastab minu õppegrupi
+echo "Antud aine tundub minu jaoks huvitav" #Esmamulje väljastamine
+echo "Hetkene mulje on hea ja edasijõudmine tundub sooritatav" #Arvamus
+
+
+# skripti lõpp
