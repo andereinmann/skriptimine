@@ -1,0 +1,35 @@
+#!/bin/bash
+#
+# Skript, kuhu on võimalik sisestada kuu number ja see väljastab aastaaja
+
+
+#Skript küsib kasutajalt andmeid
+echo -n "Sisesta kuu number (1...12): "
+read kuu
+
+#Arvutused 
+if test $kuu -eq 1 -o $kuu -eq 2 o $ kuu -eq 12 #Juhul, kui kuu nr =1, 2 või 12...
+then #...siis...
+	echo "Praegu on talv." #<-- Väljastab sellise lause 
+
+elif test $kuu -ge 3 -a $kuu -le 5 #Juhul, kui kuu number jääb vähemikku 3-5...
+then #...siis...
+	echo "Praegu on kevad." #<- Väljastab sellise lause
+
+elif test $kuu -ge 6 -a $kuu -le 8
+then
+	echo "Preagu on suvi."
+
+elif test $kuu -ge 9 -a $kuu -le 11
+then
+	echo "Praegu on sügis."
+
+else #Juhul, kui sisestatud number ei jää vahemikku 1..12
+
+	echo "Vigane sisend." #<- Väljastab sellise lause
+
+fi
+
+
+#Skripti lõpp
+
