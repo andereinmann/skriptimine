@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+# Skript, kuhu on võimalik sisestada andmeid ja baseeruvalt nendele lahendab vajalikud arvutused ja väljastab lahendused
+
+
+#Järgnevad käsud küsivad kasutajalt andmeid
+echo -n "Sisesta aluskandiku pikkus: "
+read pikkus
+echo -n "Sisesta aluskandiku laius: "
+read laius
+echo -n "Sisesta küpsise pikkus: "
+read kyp_pikkus
+echo -n "Sisesta küpsise laius: "
+read kyp_laius
+echo -n "Sisesta kihtide arv: "
+read kihid
+echo -n "Küpsise arv pakis: "
+read pakk
+
+#Arvutused
+pindala=`expr $pikkus \* $laius` #Arvutab kandiku pindala
+kyp_pind=`expr $kyp_laius \* $kyp_pikkus` #Arvutab küpsise pindala
+kyp_arvkihis=`expr $pindala / $kyp_pind` #Arvutab, kui mitu küpsist on kokku vaja kihis
+kyp_kokku=`expr $kyp_arvkihis \* $kihid` #Arvutab, mitu küpsist on vaja kokku
+pakid=`expr $kyp_arv / $pakk` #Arvutab, kui palju küpsisepakke on vaja
+jaak=`expr $kyp_arv % $pakk` #Arvutab, kui palju küpsiseid on vaja lisaks täispakkidele
+
+echo "Sul on vaja $pakid pakki küpsiseid ja lisaks $jaak tükki küpsist." #Väljastab lause, mis sisaldab arvutuste lahendusi
+
+
+# skripti lõpp
