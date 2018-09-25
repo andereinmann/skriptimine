@@ -8,21 +8,21 @@ echo -n "Sisestage kella aeg tundides (1..24): "
 read aeg
 
 #Arvutused 
-if [ $aeg -ge 6 -a $aeg -lt 12 ]; then
-	echo "Tere hommikust!"
+if [ $aeg -ge 6 -a $aeg -lt 12 ]; then #Juhul, kui kellaaeg jääb vahemikku 6-12,...
+	echo "Tere hommikust!" #<- väljastab selle lause
 
-elif [ $aeg -ge 12 -a $aeg -lt 18 ]; then
-	echo "Tere päevast!"
+elif [ $aeg -ge 12 -a $aeg -lt 18 ]; then #Juhul, kui kellaaeg jääb vahemikku 12-18,...
+	echo "Tere päevast!" #<- väljastab selle lause
 
-elif [ $aeg -ge 18 -a $aeg -lt 22 ]; then
-	echo "Tere õhtust!"
+elif [ $aeg -ge 18 -a $aeg -lt 22 ]; then #...
+	echo "Tere õhtust!" #...
 
 elif [ $aeg -ge 22 -a $aeg -lt 24 ] || [ $aeg -ge 0 -a $aeg -lt 6 ]; then
 	echo "Head ööd!"
 
-else
+else #Teistsugustel juhtudel...
 
-	echo "Vale sisend!"
+	echo "Vale sisend!" #<- Väljastab sellise lause
 
 fi
 
