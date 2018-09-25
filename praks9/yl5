@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+# Skript väljastab sisestatud andmete järgi tagurpidise kolmnurga
+
+
+#Sisestatakse andmed
+echo "Sisesta ridade arv: "
+read ridade_arv
+
+for ((i=1; i<=${ridade_arv}; i++)); do
+	echo -n "$i. " #luuakse number koos punkti ja tühikuga
+	for (( j=1; j <= ${ridade_arv} - ${i}; j++)); do #loop loeb 1st kuni ridade arvuni, ning sellest võetakse hetkel esimesel loopi pooleli olev number maha
+		echo -n "*" #väljastatakse o
+	done
+	echo "" #reavahetus
+
+done
+#Skripti lõpp
