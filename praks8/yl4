@@ -1,0 +1,33 @@
+#!/bin/bash
+#
+# Skript arvutab, et kas sisestatud number on algarv või mitte
+
+
+#Kasutaja sisestab andmed
+echo -n "Sisesta suvaline arv: "
+read arv
+
+summa=2
+#Arvutused
+if [ $arv -eq 0 -o $arv -eq 1 ]; then #Juhul, kui sisestatud arv võrdub numbriga 0 või 1, siis..
+	echo "$arv - see ei ole algarv." #... väljastab sellise lause
+fi
+
+if [ $arv -eq $summa ]; #Juhul, kui sisestatud arv võrdub summaga (sel juhul 2-ga), siis...
+	echo "$arv - see on algarv." #...väljastab sellise lause
+fi
+
+while [ $summa -lt $arv ] #Kui summa on väiksem kui antud arv
+do #..siis
+	if [ `expr $arv % $summa` -eq 0 ] #tehakse arvutus, kus arv jagatakse summaga, ning kui selle lahendi jääk  jagub 0-ga, siis
+	then
+		echo "$arv - see ei ole algarv." #väljatatakse selline lause.
+		exit
+	fi	
+summa=$(($summa + 1)) #summale lisatakse 1 juurde
+	echo "$arv on algarv"
+	exit
+done
+
+
+#Skripti lõpp
