@@ -9,8 +9,8 @@ read ridade_arv
 
 for ((i=1; i<=${ridade_arv}; i++)); do
 	echo -n "$i. " #luuakse number koos punkti ja tühikuga
-	for (( j=1; j <= ${ridade_arv} - ${i}; j++)); do
-		echo -n "o"
+	for (( j=1; j <= ${ridade_arv} - ${i}; j++)); do #loop loeb 1st kuni ridade arvuni, ning sellest võetakse üks arv maha
+		echo -n "o" #väljastatakse o
 	done
 	for (( n = 1; n <= ${i}; n++)); do #loopi laius, loetakse 1st kuni ridade arvuni
 		echo -n "*" #luuakse tärnid
