@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Skript väljastab sisestatud andmete järgi vastava tärnidega pooliku kolmnurga
+# Skript väljastab sisestatud andmete järgi vastava tärnide ja o-dega kuubi
 
 
 #Sisestatakse andmed
