@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# Skript, mis väljastab hostname ja uptime
+
+
+echo `hostname` "at" `date +"%H:%M:%S"` `uptime -p`
+
+
+# Skripti lõpp
