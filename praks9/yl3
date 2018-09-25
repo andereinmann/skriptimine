@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+# Skript väljastab sisestatud andmete järgi vastava tärnidega kuubi-taolise kujundi
+
+
+#Sisestatakse andmed
+echo "Sisesta ridade arv: "
+read ridade_arv
+echo "Sisesta tärnide arv reas: "
+read tarnide_arv
+
+for (( i=1; i<=${ridade_arv}; i++)); do #loopi pikkus (ülevalt-alla), 1-st kuni sisestatud arvuni
+echo -n "$i. " # iga rea alguses on number koos punkti ja tühikuga
+	for (( j=1; j<=${tarnide_arv}; j++)); do #loopi laius (vasakult-paremale), loop kestab kuni eelnevalt sisestatud tarnide_arvuni 
+		if [ ${j} -eq 1 ] || [ ${j} -eq ${tarnide_arv} ]; then
+			echo -n "*" #Juhul, kui J=1 või J=tärnide arvuga, tehakse tärnid
+		elif [ ${i} -eq 1 ] || [ ${i} -eq ${ridade_arv} ]; then
+			echo -n "*" #Juhul kui i=1 või i=ridade arvuga, siis tehakse ka tärnid
+		else
+			echo -n " " #Teistel juhtudel tehakse tühikud
+	fi
+done
+echo "" #iga esimese loopi korra lõpus tehakse reavahetus
+
+done
+#Skripti lõpp
