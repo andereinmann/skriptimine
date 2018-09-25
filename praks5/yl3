@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+# Skript, mis arvutab reisilt tagasituleku päeva
+
+
+#Skripti kasutaja lisainfo
+echo "Päeva nimede asemel on numbrit"
+echo "Näiteks pühapäev on 0, esmaspäev 1 ja laupäev 6."
+
+#Andmete sisestamine, mida skript loeb
+echo -n "Sisesta, millal lahkud: "
+read lahkumine
+echo -n "Sisesta reisi pikkus: "
+read kestvus
+
+#Vastuse arvutamine
+ulepaevad=$(($kestvus % 7))
+tagasitulek=$(($lahkumine + $ulepaevad))
+
+#Vastuse väljastamine
+echo "Tagasi tulete $tagasitulek päeval."
+
+
+# Skripti lõpp
