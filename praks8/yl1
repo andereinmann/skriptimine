@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Skript arvutab automaatselt paariarvude summa (esimesed 10)
+
+#Arvutused
+summa=0
+for (( a=1; a<11; a++ )) #Loopi pikkus = 1-10
+do
+	jaak=$(($a %2)) #Jäägi arvutamine, ehk nt kui a=5, siis 5/2=2, jääk 1
+	if [ $jaak -eq 0 ]; then #Juhul, kui jääk=0, siis...
+		summa=$(($summa + $a)) #summale, mis on 0, lisatakse eelnevalt sisestatud arv juurde
+		echo $summa #seejärel väljastatakse
+	fi
+done
+
+#Lahenduse väljastamine
+echo "Arvude vahemikus 1 kuni 10 paarisarvude summa on: $summa."
+
+#Skripti lõpp
