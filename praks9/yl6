@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# Skript väljastab sisestatud andmete järgi vastava tärnidega pooliku kolmnurga
+
+
+#Sisestatakse andmed
+echo "Sisesta ridade arv: "
+read ridade_arv
+
+for ((i=1; i<=${ridade_arv}; i++)); do
+	echo -n "$i. " #luuakse number koos punkti ja tühikuga
+	for (( j=1; j <= ${ridade_arv} - ${i}; j++)); do
+		echo -n "o"
+	done
+	for (( n = 1; n <= ${i}; n++)); do #loopi laius, loetakse 1st kuni ridade arvuni
+		echo -n "*" #luuakse tärnid
+	done
+	echo "" #reavahetus
+
+done
+#Skripti lõpp
