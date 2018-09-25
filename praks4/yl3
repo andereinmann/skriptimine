@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Skript, kuhu on võimalik sisestada reisijate ja bussikohtade arv ning baseeruvalt nendele arvutab skript mitu bussi on täielikult täidetud ja mitu inimest jäävad maha
+
+#Skript küsib kasutajalt andmeid
+echo -n "Sisetage reisitaje arv: "
+read reisijate_arv
+echo -n "Sisestage bussi istekohtade arv: "
+read istekohad
+
+#Arvutused
+busside_arv=`expr $reisijate_arv / $istekohad` #Skript arvutab, mitu bussi täidetakse
+maha_jaanud=`expr $reisijate_arv % $istekohad` #Skript arvutab, mitu inimest jäävad maha
+
+#Lahendi väljastamine
+echo "Täielikult täidetakse $busside_arv bussi ja maha jääb $maha_jaanud inimest"
+
+
+#Skripti lõpp
